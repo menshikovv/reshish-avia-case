@@ -1,0 +1,60 @@
+.seat-demand .case-panel__note { margin-block-start: 5px; }
+.seat-demand__stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-block: 19px 17px;
+  gap: 10px;
+}
+.seat-demand__stats div {
+  min-width: 0;
+  padding: 11px 14px;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  background: var(--surface-soft);
+}
+.seat-demand__stats dt {
+  display: flex; align-items: baseline; gap: 6px;
+  color: var(--muted); font-size: 13px; line-height: 1.25;
+}
+.seat-demand__stats dd {
+  margin-top: 3px;
+  font-size: 25px;
+  font-weight: 720;
+  letter-spacing: -.045em;
+  font-variant-numeric: tabular-nums;
+}
+.seat-dot { width: 8px; height: 8px; flex: none; border-radius: 50%; }
+.seat-dot--direct { background: var(--direct); }
+.seat-dot--transit { background: var(--transit); }
+.seat-demand__caption {
+  display: flex; justify-content: space-between; flex-wrap: wrap;
+  gap: 4px 12px; margin-block-end: 8px; font-size: 13px;
+}
+.seat-demand__caption span { color: var(--muted); }
+.seat-demand__track {
+  position: relative; display: flex; overflow: clip;
+  height: 16px; border-radius: 6px; background: var(--surface-soft);
+}
+.seat-demand__direct { background: var(--direct); }
+.seat-demand__transit { background: var(--transit); }
+.seat-demand__overflow, .seat-demand__legend i {
+  background: repeating-linear-gradient(135deg, transparent 0 4px, var(--surface) 4px 6px);
+}
+.seat-demand__overflow { position: absolute; inset-block: 0; right: 0; opacity: .69; }
+.seat-demand__capacity { position: absolute; inset-block: 0; width: 2px; transform: translateX(-100%); background: var(--text); }
+.seat-demand__scale {
+  position: relative; display: flex; justify-content: space-between;
+  margin-block-start: 5px; color: var(--muted); font-size: 12px;
+}
+.seat-demand__scale span:nth-child(2) { position: absolute; transform: translateX(-100%); font-weight: 700; color: var(--text); }
+.seat-demand__legend { display: flex; align-items: center; gap: 7px; justify-content: end; }
+.seat-demand__legend i {
+  width: 17px; height: 11px; flex: none;
+  border-radius: 3px; background-color: var(--transit);
+}
+@media (max-width: 610px) {
+  .seat-demand__stats { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 7px; }
+  .seat-demand__stats div { padding-inline: 9px; }
+  .seat-demand__stats dd { font-size: 22px; }
+}
+

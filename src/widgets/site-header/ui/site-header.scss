@@ -1,0 +1,64 @@
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 75px;
+  padding: 0 13px 4px;
+  gap: 16px;
+}
+.brand__name {
+  flex: none;
+  color: var(--text);
+  font-size: 26px;
+  font-weight: 750;
+  letter-spacing: -.05em;
+  line-height: 1.1;
+}
+.site-header__actions {
+  display: flex;
+  align-items: center;
+  min-width: 0;
+  gap: 22px;
+}
+.theme-switch {
+  display: flex;
+  flex: none;
+  align-items: stretch;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  background: var(--surface-soft);
+}
+.theme-switch button {
+  display: grid;
+  width: 47px;
+  min-height: 35px;
+  place-items: center;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  padding: 0;
+  background: transparent;
+  color: var(--muted);
+  transition: color .18s ease, border-color .18s ease, background-color .18s ease;
+}
+.theme-switch button:hover { color: var(--text); }
+.theme-switch button[aria-pressed="true"] {
+  border-color: var(--line);
+  background: var(--surface);
+  color: var(--text);
+  box-shadow: 0 1px 3px rgb(0 0 0 / .07);
+}
+.account-button { min-width: 0; max-width: 230px; }
+#account-label { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.brand__name, .account-button { text-decoration: none; }
+@media (max-width: 900px) {
+  .site-header__inner { padding-inline: 0; }
+}
+@media (max-width: 600px) {
+  .site-header__inner { min-height: 62px; padding-block-end: 0; gap: 10px; }
+  .site-header__actions { gap: 7px; }
+  .brand__name { font-size: clamp(17px, 5.15vw, 22px); }
+  .theme-switch { border-radius: 12px; }
+  .theme-switch button { width: 35px; min-height: 35px; border-radius: 10px; }
+  .theme-switch .icon, .account-button .icon { width: 17px; height: 17px; }
+  .account-button { max-width: 112px; min-height: 36px; gap: 5px; padding-inline: 8px; font-size: 13px; }
+}

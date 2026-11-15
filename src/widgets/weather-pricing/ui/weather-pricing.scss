@@ -1,0 +1,23 @@
+.weather-pricing > .case-panel__note { margin-top: 6px; }
+.weather-pricing__options {
+  display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px;
+  margin-block: 15px 12px;
+}
+.weather-pricing__options > div {
+  display: grid; align-content: start; gap: 4px; padding: 10px 12px;
+  border: 1px solid var(--line); border-radius: 12px; background: var(--surface-soft);
+}
+.weather-pricing__options h3 { font-size: 13px; }
+.weather-pricing__options strong { font-size: clamp(18px, 2vw, 23px); letter-spacing: -.035em; font-variant-numeric: tabular-nums; }
+.weather-pricing__options span { font-size: 12px; color: var(--muted); }
+.weather-pricing__note strong { color: var(--positive); }
+.weather-pricing__details { margin-top: 12px; border-top: 1px solid var(--line); padding-top: 10px; }
+.weather-pricing__details summary { font-size: 13px; width: fit-content; font-weight: 650; }
+.weather-pricing__details summary span:nth-child(2),
+.weather-pricing__details[open] summary span:first-child { display: none; }
+.weather-pricing__details[open] summary span:nth-child(2) { display: inline; }
+.weather-pricing__details > div { display: grid; gap: 7px; padding-top: 8px; font-size: 13px; line-height: 1.5; }
+@media (max-width: 390px) {
+  .weather-pricing__options > div { padding-inline: 8px; }
+}
+

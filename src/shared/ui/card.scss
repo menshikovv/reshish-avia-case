@@ -1,0 +1,18 @@
+.workspace-card {
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--surface);
+  box-shadow: var(--shadow-card);
+  animation: workspace-enter .65s var(--ease) both;
+
+  @media (max-width: 680px) {
+    border-radius: 17px;
+  }
+}
+
+@keyframes workspace-enter {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+

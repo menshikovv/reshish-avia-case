@@ -1,0 +1,36 @@
+.not-found-screen {
+  display: flex;
+  min-height: 100vh;
+  min-height: 100svh;
+  flex-direction: column;
+}
+
+.not-found {
+  display: grid;
+  flex: 1;
+  place-items: center;
+  padding: 32px 16px 64px;
+  text-align: center;
+}
+
+.not-found__content {
+  display: grid;
+  justify-items: center;
+  gap: clamp(20px, 4vw, 38px);
+  animation: page-enter .55s var(--ease) both;
+}
+
+.not-found h1 {
+  font-size: clamp(5.5rem, 20vw, 13rem);
+  font-weight: 780;
+  line-height: .95;
+  letter-spacing: -.075em;
+  text-indent: -.075em;
+}
+
+.not-found__home {
+  width: auto;
+  min-height: 46px;
+  padding-inline: 22px;
+  text-decoration: none;
+}

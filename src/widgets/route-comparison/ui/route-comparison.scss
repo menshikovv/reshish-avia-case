@@ -1,0 +1,12 @@
+.route-comparison > .case-panel__note { margin-top: 6px; }
+.route-comparison__bars { display: grid; gap: 15px; margin-block: 16px; }
+.route-comparison__label {
+  display: flex; justify-content: space-between; flex-wrap: wrap; align-items: baseline;
+  gap: 3px 12px; margin-bottom: 6px; font-size: 13px; line-height: 1.4;
+}
+.route-comparison__label strong { font-size: 15px; font-variant-numeric: tabular-nums; }
+.route-comparison__track { height: 11px; overflow: hidden; border-radius: 5px; background: var(--surface-soft); }
+.route-comparison__track div { height: 100%; border-radius: inherit; background: var(--capacity); }
+.route-comparison__track .route-comparison__fill--leading { background: var(--direct); }
+.route-comparison__outcome strong { color: var(--text); }
+

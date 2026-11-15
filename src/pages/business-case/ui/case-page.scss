@@ -1,0 +1,43 @@
+@use './hero';
+
+.case-page {
+  --workspace-gap: 22px;
+  display: grid;
+  gap: var(--workspace-gap);
+  padding-block-end: 36px;
+}
+.case-page .hero { min-height: 192px; }
+.case-page .hero__text { max-width: 660px; }
+.case-page .hero__description { max-width: 570px; }
+.case-page__decisions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--workspace-gap);
+}
+.case-panel { padding: clamp(16px, 2.2vw, 29px); }
+.case-panel__heading {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 20px;
+}
+.case-panel__note { color: var(--muted); font-size: 14px; line-height: 1.55; }
+:root {
+  --direct: #2967a8;
+  --transit: #16878a;
+  --positive: #246c53;
+}
+:root[data-theme='dark'] {
+  --direct: #75aef1;
+  --transit: #50c3c6;
+  --positive: #93d9b8;
+}
+@media (max-width: 860px) {
+  .case-page__decisions { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 680px) {
+  .case-page { --workspace-gap: 14px; padding-block-end: 20px; }
+  .case-panel h2 { font-size: 20px; }
+}
+

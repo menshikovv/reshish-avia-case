@@ -1,0 +1,46 @@
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 189px;
+  padding: 28px 50px 29px;
+  overflow: hidden;
+  border-radius: 22px;
+  background-color: #343e51;
+  background-image: linear-gradient(90deg, #1c2638aa 0%, #1c263846 34%, transparent 65%), url("./flight-sunset.webp");
+  background-position: center, center 48%;
+  background-size: cover, 100% 175%;
+  background-repeat: no-repeat;
+  color: #fff;
+  animation: page-enter .69s var(--ease) both;
+}
+.hero h1 {
+  font-size: clamp(36px, 3.6vw, 51px);
+  font-weight: 740;
+  letter-spacing: -.047em;
+  line-height: 1.1;
+}
+.hero__description {
+  margin-top: 14px;
+  color: #f7f7fa;
+  font-size: 17px;
+  line-height: 1.45;
+}
+.hero__text { animation: page-enter .78s var(--ease) .09s both; }
+@media (max-width: 900px) {
+  .hero {
+    padding-inline: 32px;
+    background-position: center, 63% center;
+    background-size: cover, cover;
+  }
+}
+@media (max-width: 600px) {
+  .hero {
+    min-height: 169px;
+    border-radius: 17px;
+    padding: 22px 19px;
+    background-image: linear-gradient(90deg, #192338de, #1923388c 58%, #19233837), url("./flight-sunset.webp");
+    background-position: center, 66% center;
+  }
+  .hero h1 { font-size: clamp(30px, 8vw, 42px); }
+  .hero__description { margin-top: 9px; font-size: 14px; }
+}
